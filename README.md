@@ -1,5 +1,7 @@
 # HackTheBurgh19
 
+Devpost submission: https://devpost.com/software/predictheburgh
+
 **1. Add virtual environment and setup requirements**
 
 ```virtualenv venv```
@@ -15,3 +17,5 @@
 ```flask run```
 
 Then just go to http://localhost:5000/ in the browser
+
+
