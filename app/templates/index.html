@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="frontPage">
+      <h1>PredicTheBurgh</h1>
+      <h2>Choose the currency pair: base currency on the left and currency to track on the right</h2>
+
+      <div class="currencies">
+        <select id="currency1">
+            <option value="empty">Choose</option>
+            <option value="euro">Euro</option>
+            <option value="pound">Pound Sterling</option>
+            <option value="usd">US Dollar</option>
+        </select>
+
+        <select id="currency2">
+            <option value="empty">Choose</option>
+            <option value="euro">Euro</option>
+            <option value="pound">Pound Sterling</option>
+            <option value="usd">US Dollar</option>
+        </select>
+      </div>
+
+      <div class="chartTest">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+          </p>
+        </div>
+        <canvas id="myChartEmpty"></canvas>
+      </div>
+
+      <div class="project usdeuro">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 USD = {{ rate_USD_EUR }} EUR
+          </p>
+        </div>
+        <canvas id="myChartUSDEUR"></canvas>
+      </div>
+
+      <div class="project eurousd">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 EUR = {{ rate_EUR_USD }} USD
+          </p>
+        </div>
+        <canvas id="myChartEURUSD"></canvas>
+      </div>
+
+      <div class="project usdpound">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 USD = {{ rate_USD_GBP }} GBP
+          </p>
+        </div>
+        <canvas id="myChartUSDGBP"></canvas>
+      </div>
+
+      <div class="project poundusd">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 GBP = {{ rate_GBP_USD }} USD
+          </p>
+        </div>
+        <canvas id="myChartGBPUSD"></canvas>
+      </div>
+
+      <div class="project europound">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 EUR = {{ rate_EUR_GBP }} GBP
+          </p>
+        </div>
+        <canvas id="myChartEURGBP"></canvas>
+      </div>
+
+      <div class="project poundeuro">
+        <div id="currentRate">
+          <p style="color: #d9d9d9">
+            Current exchange rate, 1 GBP = {{ rate_GBP_EUR }} EUR
+          </p>
+        </div>
+        <canvas id="myChartGBPEUR"></canvas>
+      </div>
+
+
+    </div>
+
+    <div class="infoPage">
+      <div class="information">
+        <h3 style="font-family: 'Martel Sans', sans-serif;">
+          PredicTheBurgh
+        </h3>
+        <p>
+          By choosing any two options in the dropdown above, you’ll get to see the exchange rates between the two currencies, spread across the past month, together with a graph depicting a predicted pattern.
+          <br><br>
+          Save money by selecting the rate at which you want to be notified to convert your money between your chosen currencies.
+        </p>
+      </div>
+
+      <div class="notification">
+        <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          {{ form.name.label }}
+          {{ form.name(size=32, class="text") }}
+          {{ form.phone.label }}
+          {{ form.phone(size=32, class="text") }}
+          {{ form.rate.label }}
+          {{ form.rate(size=32, class="text") }}
+          {{ form.choice.label }}
+          {{ form.choice(class="choicebox") }}
+          {{ form.above_below.label }}
+          {{ form.above_below(class="choicebox") }}
+          {{ form.submit(class="submit") }}
+        </form>
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<html>
+    <head>
+      <title>{{title}}</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script>
+      var USD_EUR_data = {{ USD_EUR_data }};
+      var USD_EUR_predicted = {{ USD_EUR_predicted }};
+      var EUR_USD_data = {{ EUR_USD_data }};
+      var EUR_USD_predicted = {{ EUR_USD_predicted }};
+      var USD_GBP_data = {{ USD_GBP_data }};
+      var USD_GBP_predicted = {{ USD_GBP_predicted }};
+      var GBP_USD_data = {{ GBP_USD_data }};
+      var GBP_USD_predicted = {{ GBP_USD_predicted }};
+      var EUR_GBP_data = {{ EUR_GBP_data }};
+      var EUR_GBP_predicted = {{ EUR_GBP_predicted }};
+      var GBP_EUR_data = {{ GBP_EUR_data }};
+      var GBP_EUR_predicted = {{ GBP_EUR_predicted }};
+      var years = {{ years | safe }};
+    </script>
+    <script src="{{url_for('static', filename='script/script.js')}}"></script>
+    </body>
+</html>
