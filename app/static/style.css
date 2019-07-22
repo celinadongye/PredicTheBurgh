@@ -1,0 +1,198 @@
+/* CSS files add styling rules to your content */
+@import url('https://fonts.googleapis.com/css?family=Raleway|Martel+Sans');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to right bottom, #403958, #3e6d89);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* First page */
+
+.frontPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.frontPage > h1 {
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.frontPage > h2 {
+  font-weight: 200;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#currency1 {
+  color: #fff;
+  font-size: 1rem;
+  background: transparent;
+  margin: 5px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#currency1:hover {
+  background: #435b77;
+  opacity: 1;
+}
+
+#currency1 option {
+  background-color: #2F4369;
+}
+
+#currency2 {
+  color: #fff;
+  font-size: 1rem;
+  background: transparent;
+  margin: 5px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#currency2:hover {
+  background: #435b77;
+  opacity: 1;
+}
+
+#currency2 option {
+  background-color: #2F4369;
+}
+
+.currencies {
+  display: flex;
+  flex-direction: row;
+}
+
+.chartTest {
+  height: 60vh;
+  width: 60vw;
+  margin-top: 30px;
+  opacity: 0;
+}
+
+.eurousd, .usdeuro, .europound, .poundeuro, .usdpound, .poundusd {
+  height: 60vh;
+  width: 60vw;
+  margin-top: 30px;
+}
+
+#currentRate {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Info page */
+
+.infoPage {
+  height: 100vh;
+  background-color:#f2f2f2;
+  display: flex;
+  align-items: center;
+}
+
+.information {
+  text-align: left;
+  flex: 4;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.information > h3 {
+  color: #37507e;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-bottom: 3vh;
+}
+
+.information > p {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5rem;
+}
+
+.notification {
+  background-color: #e6e6e6;
+  font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  text-align: left;
+  flex: 3;
+  margin-right: 5vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 75%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.notification > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:100%;
+}
+
+.text {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.submit {
+  background-color: #37507e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  padding: 14px 20px;
+  font-size: 1.2rem;
+  margin-top: 8px;
+  opacity: 1.0;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background-color: #5f7fb9;
+  opacity: 0.8;
+}
+
+.choicebox {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  height: 40px;
+}
