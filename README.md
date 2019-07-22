@@ -1,4 +1,4 @@
-# HackTheBurgh19
+# HackTheBurgh 2019
 
 Devpost submission: https://devpost.com/software/predictheburgh
 
